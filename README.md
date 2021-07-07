@@ -15,6 +15,8 @@ Select th sentry-cocoa root folder to open the app profile:
 3. XCode Edit Schemes > 'Run' action for your scheme > Info tab > uncheck 'Debug executable' box.  
 This ensures your app doesn't run in debugging mode, in which case unhandled exceptions won't send to Sentry.
 
+3. Run `pod install` from the terminal
+
 4. Click the Run/play button targeting iPhone 11
 
 4. In **Simulator**, Launch the sentry-cocoa app
@@ -24,7 +26,7 @@ This ensures your app doesn't run in debugging mode, in which case unhandled exc
 ## How to Upgrade SDK
 Check out a new branch so you can open a PR.    
 1. Xcode -> Podfile, increment the sdk version.
-2. `pod update`
+2. `pod update`, or `pod install` if pod updating is hanging.
 2. Click 'Play' button
 
 ## Flow/Demo
@@ -52,6 +54,8 @@ The demo app enriches every event with: Custom context, breadcrumbs, tags, user 
 4. Run Scripts:
     
     Upload the Debug Symbols to the target project and associate the commits to the release object.
+
+5. Check for User Feedback collected by the Capture Message and Unhandled Exception buttons
 
 ## Documentation/Resources
 
